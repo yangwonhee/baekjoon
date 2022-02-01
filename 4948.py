@@ -4,9 +4,8 @@ max = 123456 * 2 + 1
 T = [True] * max
 # print(type(T))
 for i in range(2, int(sqrt(max)+1)):
-    if T[i]:
-        for j in range(2*i,max,i):
-            T[j] = False
+    for j in range(2*i,max,i):
+        T[j] = False
 
 
 
