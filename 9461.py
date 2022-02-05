@@ -1,15 +1,12 @@
-T = int(input())
-case = [1, 1, 1, 2, 2, 3, 4, 5]
+import sys
+r = sys.stdin.readline
 
-def case_push(case, i):
-    while i > 7:
-        case_push(case[i-6])
-        i -= 1
-    return case[i-1] + case[i-6]
+N = int(r())
+arr = [int(r()) for _ in range(N)]
+seq = [1, 1, 1, 2, 2,]
 
-for i in range(T):
-    if i < 7:
-        print(case[i])
-    else:
-        while i > 0:
-            print(case_push(case, i))
+for i in range(5, max(arr)):
+    seq.append(seq[i-1]+seq[i-5])
+
+for i in arr :
+    print(seq[i-1])
