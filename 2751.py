@@ -1,7 +1,7 @@
 import sys
 
 N = int(sys.stdin.readline())
-data = [sys.stdin.readline().strip() for i in range(N)]
+data = [int(sys.stdin.readline()) for i in range(N)]
 
 data.sort()
 
