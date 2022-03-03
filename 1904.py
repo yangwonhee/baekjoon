@@ -1,11 +1,10 @@
 import sys
-n = int(sys.stdin.readline())
-a = 2
-b = 1
-sum = 0
-cnt = 0
+input = sys.stdin.readline
+n = int(input())
+dp = [0] * 1000001
+dp[1] = 1
+dp[2] = 2
 
-while sum < n:
-    for i in range(n):
-        for j in range(n):
-            
+for k in range(3, n+1):
+    dp[k] = (dp[k-1]+dp[k-2])%15746
+print(dp[n])
