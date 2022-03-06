@@ -5,6 +5,7 @@ line = []
 for i in range(k):
     line.append(int(input()))
 
+# start 0으로 두니까 zeroDivisionError가 나지 ..
 start = 1
 end = max(line)
 
